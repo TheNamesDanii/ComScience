@@ -1,0 +1,24 @@
+# Program to practice basic string operations
+
+#Initialise the string
+myString2 = "The quick brown fox jumps over the lazy dog."
+# index =    01234567890123456789012345678901234567890123
+print(myString2[0])
+print(myString2[1])
+print(myString2[2+4])
+print(myString2[14])
+print(myString2[8])
+print(myString2[43])
+
+# The index can be any valid command in Python
+
+pos = 17
+print(myString2[pos])
+print(myString2[pos+1])
+print(myString2[3])
+
+# A general pattern can be used to find the last character
+print( myString2[len(myString2)-1] )
+
+
+
