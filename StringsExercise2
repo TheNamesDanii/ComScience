@@ -18,3 +18,12 @@ print("%s" %3)
 print("%d" %3.14)
 print("%f" %"Hi!")
 print("%f" %3)
+
+firstString = input(str("Enter a word, any word. "))
+
+stringLength = len(firstString)
+firstCharacter = firstString[0]
+middleCharacter1 = (len(firstString))/2
+lastCharacter = firstString[len(firstString)-1]
+middleCharacter2 = firstString[int(middleCharacter1)]
+print(firstCharacter + middleCharacter2 + lastCharacter)
