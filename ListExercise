@@ -1,0 +1,47 @@
+listOfSports = ["Football","Basketball","Volleyball","Hockey"]
+newSport = input(str("What is your favourite sport? "))
+listOfSports.append(newSport)
+print(listOfSports)
+
+listOfSubjects = ["English","Maths","Irish","Geography","History"]
+print(listOfSubjects)
+dislikesSubject = input(str("Which of these subjects do you not like? "))
+listOfSubjects.remove(dislikesSubject)
+print(listOfSubjects)
+
+colourList = ["Red","Orange","Yellow","Green","Aqua","Cyan","Blue","Purple","Pink","White"]
+startingNumber = input("Give a number between 0 and 4. ")
+startingNumber = int(startingNumber)
+endingNumber = input("Give a number between 5 and 9. ")
+endingNumber = int(endingNumber)
+print(colourList[startingNumber:endingNumber])
+
+numberList = [111,222,333,444]
+print("111 \n","222 \n","333 \n","444 \n")
+newNumber = input("Enter a three digit number. ")
+newNumber = int(newNumber)
+if newNumber == 111:
+    print("111 is the first number in the list.")
+elif newNumber == 222:
+    print("222 is the second number in the list.")
+elif newNumber == 333:
+    print("333 is the third number in the list.")
+elif newNumber == 444:
+    print("444 is the fourth number in the list.")
+else:
+    print("That is not in the list.")
+    
+    name1 = input(str("Enter the first name. "))
+name2 = input(str("Enter the second name. "))
+name3 = input(str("Enter the third name. "))
+listOfNames = [name1,name2,name3]
+addResponse = input(str("Would you like to add more people? "))
+if addResponse == "no":
+    print(listOfNames)
+else:
+    moreAddResponse = input(str("What is the name of the next person? "))
+    if moreAddResponse == "no":
+        print(listOfNames)
+    else: listOfNames.append(moreAddResponse)
+    print(listOfNames)
+
