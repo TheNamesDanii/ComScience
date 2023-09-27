@@ -1,0 +1,99 @@
+number1 = input("Enter a number. ")
+number1 = int(number1)
+number2 = input("Enter a second number. ")
+number2 = int(number2)
+if number1 > number2:
+    print(number2,number1)
+else:
+    print(number1,number2)
+    
+    givenNumber = input("Enter a number that is less than 20. ")
+givenNumber = int(givenNumber)
+if givenNumber > 20:
+    print("The number is too high.")
+else: print("Thank you.")
+
+betweenNumber = input("Enter a number between 10 and 20. ")
+betweenNumber = int(betweenNumber)
+if betweenNumber < 10:
+    print("The number is too low.")
+elif betweenNumber > 20:
+    print("The number is too high.")
+else: print("Thank you.")
+
+givenColour = input("What is your favourite colour? ")
+givenColour = str(givenColour)
+if givenColour == "Red":
+    print("I like red too.")
+elif givenColour == "RED":
+    print("I like red too.")
+elif givenColour == "red":
+    print("I like red too.")
+else:
+    print("I dont like",givenColour,", I prefer red.")
+    
+    rainAnswer = input("Is it currently raining? ")
+rainAnswer = str(rainAnswer.lower())
+if rainAnswer == "yes":
+    windAnswer = input("Is it currently windy? ")
+    windAnswer = str(windAnswer.lower())
+    if windAnswer == "yes":
+        print("It is too windy for an umbrella.")
+    else: print("Take an umbrella.")
+else: print("Enjoy your day.")
+
+userAge = input("Enter your age. ")
+userAge = int(userAge)
+if userAge >= 18:
+    print("You can vote.")
+elif userAge == 17:
+    print("You can learn to drive.")
+elif userAge == 16:
+    print("You can buy a lottery ticket.")
+elif userAge <= 15:
+    print("You can go trick-or-treating.")
+    
+enteredNumber = input("Enter a number, any number. ")
+enteredNumber = int(enteredNumber)
+if enteredNumber < 10:
+    print("Too low.")
+elif enteredNumber >= 10 and enteredNumber <= 20:
+    print("Correcc.")
+else:
+    print("Too high.")
+    
+numm = input("Enter a number, 1, 2 or 3. ")
+numm = int(numm)
+if numm == 1:
+    print("Thank you.")
+elif numm == 2:
+    print("Well done.")
+elif numm == 3:
+    print("Correct.")
+else:
+    print("Error message.")
+    
+givenName = input("Enter your name. ")
+for i in range(3):
+    print(givenName)
+    
+givenName = input("Enter your name. ")
+givenNum = input("Enter a number. ")
+givenNum = int(givenNum)
+for i in range(givenNum):
+    print(givenName)
+
+
+personsName = input("Enter your name. ")
+for i in personsName:
+    print(i)
+    
+
+    
+
+    
+
+    
+    
+    
+
