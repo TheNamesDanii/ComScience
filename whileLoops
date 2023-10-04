@@ -1,0 +1,55 @@
+total = 0
+while total <= 50:
+    num1 = input("Enter a number. ")
+    num1 = int(num1)
+    total = total + num1
+print("The total is over 50.")
+
+number = input("Enter a number. ")
+number = int(number)
+while number <= 5:
+    number = input("Enter a number. ")
+    number = int(number)
+print("The last number you entered was a",number)
+
+numberOne = input("Enter a first number. ")
+numberOne = int(numberOne)
+numberTwo = input("Enter a second number. ")
+numberTwo = int(numberTwo)
+numberThree = numberOne + numberTwo
+print("The current number is:", numberThree)
+response = input("Would you like to add another number? y/n ")
+while response == "y":
+    numberFour = input("Enter another number. ")
+    numberFour = int(numberFour)
+    numberThree = int(numberThree)
+    numberThree = numberThree + numberFour
+    print("The current number is:", numberThree)
+    response = input("Would you like to add another number? y/n ")
+print("The final number is:", numberThree)
+
+invited = input("Name a person you want to invite to a party. ")
+invitedPeople = 1
+print(invited, "has been invited. ")
+continueInvite = input("Would you like to invite someone else? y/n ")
+while continueInvite == "y":
+    nextPerson = input("Enter the name of the next person. ")
+    invitedPeople = invitedPeople + 1
+    print(nextPerson, "has been invited.")
+    continueInvite = input("Would you like to invite someone else? y/n ")
+print("There are", invitedPeople, "people coming to this party.")
+
+compnum = 50
+numberOfAttempts = 0
+recieved = input("Enter a number, any number. ")
+recieved = int(recieved)
+while recieved < 50 and recieved > 50:
+    if recieved < 50:
+        numberOfAttempts = numberOfAttempts + 1
+        print("Too low. Take another guess.")
+        recieved = input("Enter a number, any number. ")
+    elif recieved > 50:
+        numberOfAttempts = numberOfAttempts + 1
+        print("Too high. Take another guess.")
+        recieved = input("Enter a number, any number. ")
+print("Well done. You took", numberOfAttempts, "attempts to guess the number.")
