@@ -1,0 +1,92 @@
+import random
+myNum = random.randrange(0,100,1)
+print(myNum)
+
+import random
+fruits = ["Apple", "Banana", "Cucumber", "Peach", "Durian"]
+pickedFruit = random.choice(fruits)
+print(pickedFruit)
+
+import random
+choice = input("Heads or tails? h/t ")
+coinSides = ["Heads", "Tails"]
+coinFlip = random.choice(coinSides)
+if choice == "h" and coinFlip == "Heads":
+    print("Good guess!")
+elif choice == "t" and coinFlip == "Tails":
+    print("Good guess!")
+else:
+    print("Bad luck bozo.")
+    
+import random
+randNum = random.randrange(0,5,1)
+guessNum = input("Choose any number between 1 and 5. ")
+guessNum = int(guessNum)
+if randNum == guessNum:
+    print("Good guess!")
+else: print("Tough luck.")
+
+import random
+randomNum = random.randrange(1,10,1)
+askedNum = input("Pick any number between 1 and 10. ")
+askedNum = int(askedNum)
+while askedNum < randomNum or askedNum > randomNum:
+    print("Nope, try again. ")
+    askedNum = input("Pick another number. ")
+    askedNum = int(askedNum)
+if askedNum == randomNum:
+    print("Good guess!")
+    
+import random
+randomNum = random.randrange(1,10,1)
+askedNum = input("Pick any number between 1 and 10. ")
+askedNum = int(askedNum)
+while askedNum < randomNum or askedNum > randomNum:
+    if askedNum < randomNum:
+        print("Too low. Try again.")
+    elif askedNum > randomNum:
+        print("Too high. Try again.")
+    askedNum = input("Pick another number. ")
+    askedNum = int(askedNum)
+if askedNum == randomNum:
+    print("Good guess!")
+    
+import random
+answeredQ = 0
+while answeredQ < 5:
+    char1 = random.randrange(0,20,1)
+    char2 = random.randrange(0,20,1)
+    char3 = char1 + char2
+    print("Here is a maths sum,",char1,"+",char2,"= ?")
+    char4 = input("What is the answer? ")
+    char4 = int(char4)
+    if char4 == char3:
+        print("Well done!")
+        answeredQ = answeredQ + 1
+    else:
+        print("Nope, try again.")
+        
+import random
+colourList = ["red","orange","yellow","green","aqua"]
+randomCol = random.choice(colourList)
+chosenCol = input("I'm thinking of a colour. What is it? " )
+if chosenCol == randomCol:
+        print("Good guess. I was thinking of that.")
+        guessedRight == guessedRight + 1
+else:
+    if randomCol == "red":
+        print("I bet your face is RED and rage is consuming you.")
+    elif randomCol == "orange":
+        print("You look pretty ORANGE from the amount of fake tan you put on.")
+    elif randomCol == "yellow":
+        print("You need some new toothpaste because your teeth are looking a little YELLOW.")
+    elif randomCol == "green":
+        print("You're looking pretty GREEN with envy right now.")
+    elif randomCol == "aqua":
+        print("You're looking thirsty, go drink some AQUA.")
+        
+# These colour messages are intentionally harsh. Tough luck.
+        
+
+    
+
