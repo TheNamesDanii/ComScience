@@ -1,0 +1,45 @@
+fName = input("Enter your first name. ")
+print(len(fName))
+sName = input("Enter your surname. ")
+print(len(sName))
+print(fName, sName)
+length = len(fName) + len(sName)
+print(length)
+
+sub = input("Enter the name of your favourite school subject. ")
+for i in range(len(sub)):
+    print(sub, end= '-')
+    # whar?
+
+poem = "Skiddadle skadoodle."
+start = input("Enter a start point (as a number) ")
+end = input("Enter an end point (as a number) ")
+start = int(start)
+end = int(end)
+print(poem[start:end])
+
+word = input("Enter a word, any word, in uppercase. ")
+if word.isupper() == True:
+    print("Thank you.")
+else:
+    print("Not uppercase, try again.")
+    
+code = input("Enter your postcode. ")
+print(code[:1], code[4:5])
+
+vowels = "a"
+name = input("Enter your name. ")
+vCount = name.find(vowels)
+print("You have",vCount,"vowels in your name.")
+# im lost...
+
+
+password = input("Enter a password, it can be anything. ")
+reEnter = input("Enter that password again. ")
+if password == reEnter:
+    print("Thank you. ")
+else:
+    print("Incorrect.")
+    
+#challenge 87 is just too confusing for me.
+
