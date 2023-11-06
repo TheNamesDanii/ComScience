@@ -1,0 +1,33 @@
+#118
+
+def askNum():
+    numb = input("Enter a number, any number. ")
+    numb = int(numb)
+    return numb
+num = askNum()
+
+def countNum():
+    z = 0
+    while z <= num - 1:
+        z = z + 1
+        print(z)
+countNum()
+
+#119
+
+import random
+def lowHigh():
+    lo = input("Enter a number. ")
+    lo = int(lo)
+    hi = input("Enter a higher number. ")
+    hi = int(hi)
+    comp_num = random.randrange(lo,hi)
+    
+def guessing():
+    thinkNum = comp_num
+    guess = input("I am thinking of a number. What is it? ")
+    guess = int(guess)
+
+def checker():
+    if guess == thinkNum:
+        
