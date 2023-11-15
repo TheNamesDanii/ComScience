@@ -1,0 +1,54 @@
+#1
+
+print("This program will do this: \n Ask for three inputs. \n A > B and A > C, I will print A. \n B > A and B > C, I will print B. \n Or else I will print C.")
+A = input("Give me first number. ")
+A = int(A)
+B = input("Give me second number. ")
+B = int(B)
+C = input("Give me third number. ")
+C = int(C)
+if A > B and A > C:
+    print("A is the greatest number.")
+elif B > A and B > C:
+    print("B is the greatest number.")
+else:
+    print("C is the greatest number.")
+    
+#2
+
+print("I will do this: \n I will ask for three numbers. \n If A > B and A > C, I will say that A is the biggest. Else C. \n If A > B and B > C, I will say that B is the greatest number. Else C.")
+A = input("Gimme numba one. ")
+A = int(A)
+B = input("Gimme numba two. ")
+B = int(B)
+C = input("Gimme numba tree. ")
+C = int(C)
+if A > B:
+    if A > C:
+        print("A is the greatest number.")
+    else:
+        print("C is the greatest number.")
+else:
+    if B > C:
+        print("B is the greatest number.")
+    else:
+        print("C is the greatest number.")
+        
+#3
+
+print("I will do this: \n I will ask for three numbers. \n Maximum is A. \n If maximum < B, I will say that B is maximum. \n If maximum < C, I will say that C is the maximum.")
+A = input("One is? ")
+A = int(A)
+B = input("Two is? ")
+B = int(B)
+C = input("Three is? ")
+C = int(C)
+max = A
+if max < B:
+    max = B
+if max < C:
+    max = C
+    print("C is the greatest number.")
+else:
+    print("A is the greatest number.")
+
