@@ -22,12 +22,126 @@ def lowHigh():
     hi = input("Enter a higher number. ")
     hi = int(hi)
     comp_num = random.randrange(lo,hi)
+    return comp_num
+
     
 def guessing():
-    thinkNum = comp_num
     guess = input("I am thinking of a number. What is it? ")
     guess = int(guess)
+    return guess 
 
 def checker():
-    if guess == thinkNum:
+    guessed = 0
+    comp_num = lowHigh()
+    while guessed < 1:
+        guess = guessing()
+        if guess < comp_num:
+            print("Too low, try again.")
+        elif guess > comp_num:
+            print("Too high, try again.")
+        elif guess == comp_num:
+            print("Correct, you win.")
+            guessed = guessed + 1
+checker()
+
+#120 
+
+def addition():
+    import random
+    num1 = random.randrange(5,20)
+    num2 = random.randrange(5,20)
+    num3 = num1 + num2
+    num3 = str(num3)
+    answered = 0
+    correct = 0
+    while answered < 1:
+        sumAns = input("What is " + str(num1) + " + " + str(num2) + "? " )
+        if sumAns == num3:
         
+            correct = correct + 1
+            answered = answered + 1
+        else:
+            print("Your answer was " + str(sumAns) + ", the correct answer was "+ str(num3) + ".")
+    return correct
+
+def subtraction():
+    import random
+    num4 = random.randrange(25,50)
+    num5 = random.randrange(25,50)
+    num6 = num4 - num5
+    num6 = str(num6)
+    answered = 0
+    correct = 0
+    while answered < 1:
+        sumAns = input("What is " + str(num4) + " - " + str(num5) + "? ")
+        if sumAns == num6:
+            correct = correct + 1
+            answered = answered + 1
+    return correct
+
+def checker1():
+    correct = addition()
+    if correct == 1:
+        print("Your answer is correct.")
+    else:
+        print("Your answer is not correct.")
+def checker2():
+    correct = subtraction()
+    if correct == 1:
+        print("Your answer is correct.")
+    else:
+        print("Your answer is not correct.")
+
+menuSel = input("1) Addition \n2) Subtraction \n Enter 1 or 2: ")
+menuSel = int(menuSel)
+if menuSel == 1:
+    checker1()
+elif menuSel == 2:
+    subtraction()
+else:
+    print("no!")
+    
+#121
+    
+nameList = []
+L = len(nameList)
+
+def viewer():
+    response = input("There are " + str(L) + " names in the list. \n Type 'menu' to return to the main menu. ")
+    response.lower()
+    if response == "menu":
+        menu()
+        
+def adder():
+    name = input("Whose name would you like to add to the list? ")
+    response = input("This name has been added to the list. \n To add another name, type 'add'. To return to the menu, type 'menu.'")
+    response.lower()
+    if response == "add":
+        adder()
+    elif response == "menu":
+        menu()
+    else:
+        print("no! returning to main menu...")
+        menu()
+    return name
+    
+
+def menu():
+    choice = input("Name Diddly Program \n 1) View List \n 2) Add to List \n 3) Change Name in List \n 4) Delete Name from List \n 5) End the Program \n Make a choice: ")
+    choice = int(choice)
+    return choice
+choice = menu()
+if choice == 1:
+    viewer()
+elif choice == 2:
+    adder()
+elif choice == 3:
+    changer()
+elif choice == 4:
+    deleter()
+elif choice == 5:
+    stopper()
+else:
+    print("no!")
+    
+# i give up.   :c
