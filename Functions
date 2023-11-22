@@ -107,41 +107,36 @@ nameList = []
 L = len(nameList)
 
 def viewer():
-    response = input("There are " + str(L) + " names in the list. \n Type 'menu' to return to the main menu. ")
-    response.lower()
-    if response == "menu":
-        menu()
+    print("There are " + str(len(nameList)) + " names in the list. \n The names in the list are: " + str(nameList))
         
-def adder():
+def adder(nameList):
     name = input("Whose name would you like to add to the list? ")
-    response = input("This name has been added to the list. \n To add another name, type 'add'. To return to the menu, type 'menu.'")
-    response.lower()
-    if response == "add":
-        adder()
-    elif response == "menu":
-        menu()
-    else:
-        print("no! returning to main menu...")
-        menu()
-    return name
+    nameList.append(name)
+    print("Name added. \n Returning to menu. ")
     
+def changer(nameList):
+    name = input("Whose name would you like to modify? ")
+    nameList.remove(name)
+    newN = input("What would you like to change this name to? ")
+    nameList.append(name)
 
 def menu():
     choice = input("Name Diddly Program \n 1) View List \n 2) Add to List \n 3) Change Name in List \n 4) Delete Name from List \n 5) End the Program \n Make a choice: ")
     choice = int(choice)
     return choice
+
 choice = menu()
-if choice == 1:
-    viewer()
-elif choice == 2:
-    adder()
-elif choice == 3:
-    changer()
-elif choice == 4:
-    deleter()
-elif choice == 5:
-    stopper()
-else:
-    print("no!")
+while choice != 5:
+
+    if choice == 1:
+        viewer()
+    elif choice == 2:
+        adder(nameList)
+    elif choice == 3:
+        changer(nameList)
+    elif choice == 4:
+        deleter(nameList)
+    choice = menu()
     
-# i give up.   :c
+
+
