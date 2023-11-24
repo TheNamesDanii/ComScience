@@ -1,12 +1,59 @@
-#1
+# 1
 
-opener = open("C:/Users/19DDybisz.ACC/Desktop/Downloaded/numbers.txt",'r')
+f = open("C:/Users/19DDybisz.ACC/Desktop/Downloaded/numbers.txt",'r')
 total = 0
-for line in opener:
+for line in f:
     x = line.strip()
     if x != '':
         x = int(x)
         total = total + x
 print(total)
-    
-opener.close()
+
+f.close()
+
+# 2
+
+f = open("C:/Users/19DDybisz.ACC/Desktop/Downloaded/numbers.txt",'r')
+total = 0
+for line in f:
+    x = line.strip()
+    if x != '':
+        x = int(x)
+        total = total + x
+        print(total)
+
+
+f.close()
+
+# 3
+
+f = open("C:/Users/19DDybisz.ACC/Desktop/Downloaded/shelley.txt",'r')
+lineCount = 0
+for line in f:
+    lineCount = lineCount + 1
+count = lineCount
+print(count)
+
+# 4
+
+f = open("C:/Users/19DDybisz.ACC/Desktop/Downloaded/shelley.txt",'r')
+lineCount = 0
+emptyCount = 0
+for line in f:
+    s = line.strip()
+    if s == '':
+        emptyCount = emptyCount + 1
+    else:
+        lineCount = lineCount + 1
+count = lineCount
+print(count)
+empty = emptyCount
+print(empty)
+
+# 5
+
+
+
+
+
+
