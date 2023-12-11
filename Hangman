@@ -1,0 +1,77 @@
+# print("----------\n 0       |\n         | \n         |\n         | \n_________|")
+# print("----------\n 0       |\n/        | \n         |\n         | \n_________|")
+# print("----------\n 0       |\n/|       | \n         |\n         | \n_________|")
+# print("----------\n 0       |\n/|\      | \n         |\n         | \n_________|")
+# print("----------\n 0       |\n/|\      | \n |       |\n         | \n_________|")
+# print("----------\n 0       |\n/|\      | \n |       |\n/        | \n_________|")
+# print("----------\n 0       |\n/|\      | \n |       |\n/ \      | \n_________|")
+gameScore = 0
+correctG = 0
+wrongG = 0
+hangmanStage = 0
+g = "N"
+list = ["trace","meadow","diddly","diddle","pluh","goober","schlawg","vexxed","fark","johnson"]
+testWord = "diddly"
+testWord = str(testWord)
+L1 = '_'
+L2 = '_'
+L3 = '_'
+L4 = '_'
+L5 = '_'
+L6 = '_'
+
+R1 = testWord[0]
+R2 = testWord[1]
+R3 = testWord[(len(testWord)-4)]
+R4 = testWord[(len(testWord)-3)]
+R5 = testWord[(len(testWord)-2)]
+R6 = testWord[-1]
+letterCount = len(testWord)
+
+letters = [R1,R2,R3,R4,R5,R6]
+referenceLetters = [R1,R2,R3,R4,R5,R6]
+display = [L1,L2,L3,L4,L5,L6]
+
+
+print(" Lets play some hangman! \n I am thinking of a word, start by guessing the letters in the word I am thinking of. \n ")
+
+
+while gameScore < len(testWord):
+    print(display[0] + display[1] + display[2] + display [3] + display[4] + display[5])
+    guess = input("\n \n Your guess is? --> ")
+    guess.lower()
+    if guess in letters:
+        gameScore = gameScore + 1
+        correctG = correctG + 1
+        display.pop(letters.index(guess))
+        display.insert(letters.index(guess),guess)
+        letters.pop(letters.index(guess))
+        letters.insert(referenceLetters.index(guess),g)
+        print("Good!")
+    else:
+        print("Incorrect guess, hangman is emerging. ")
+        print("You have", len(testWord) - (gameScore), "letters left.")
+        hangmanStage = hangmanStage + 1
+        if hangmanStage == 0:
+            print("----------\n 0       |\n         | \n         |\n         | \n_________|")
+        elif hangmanStage == 1:
+            print("----------\n 0       |\n/        | \n         |\n         | \n_________|")
+        elif hangmanStage == 2:
+            print("----------\n 0       |\n/|       | \n         |\n         | \n_________|")
+        elif hangmanStage == 3:
+            print("----------\n 0       |\n/|\      | \n         |\n         | \n_________|")
+        elif hangmanStage == 4:
+            print("----------\n 0       |\n/|\      | \n |       |\n         | \n_________|")
+        elif hangmanStage == 5:
+            print("----------\n 0       |\n/|\      | \n |       |\n/        | \n_________|")
+            print("Rest in pieces hangman, you lose. \n The word was: 'diddly'. ")
+            letters.clear()
+            
+            
+        
+                
+        
+if gameScore == len(testWord):
+    print(display[0] + display[1] + display[2] + display [3] + display[4] + display[5])
+    print(" Great! \n The word was 'diddly'. \n You win!")
+
