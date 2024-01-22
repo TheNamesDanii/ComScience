@@ -1,0 +1,97 @@
+def menu():
+    choice = input("Number Switchy Thing \n Please make a choice. \n 1) Binary to Decimal \n 2) Decimal to Binary \n 3) Binary Addition \n ⭢ ")
+    choice = int(choice)
+    if choice == 1:
+        BinToDex()
+    elif choice == 2:
+        DexToBin()
+    elif choice == 3:
+        BinAdd()
+    else:
+        print("\n no! \n")
+        menu()
+
+def BinToDex():
+    bin = input("Enter a binary number. \n ⭢ ")
+    dex = 0
+    for number in bin:
+        dex = dex * 2 + int(number)
+    print("The binary number",bin,"is",dex,"in decimal form.")
+    goBack = input("\n Type 'again' to do another conversion, type 'menu' to return to the menu. \n ⭢ ")
+    goBack.lower
+    if goBack == "again":
+        BinToDex()
+    elif goBack == "menu":
+        menu()
+
+def DexToBin():
+    dexIn = input("Enter a decimal number. \n ⭢ ")
+    dexIn = int(dexIn)
+    dexOut = dexIn
+    binList = []
+    binNum = ''
+    rem = 0
+    
+    while dexOut > 0:
+        rem = dexOut % 2
+        dexOut = dexOut // 2
+        binList.append(rem)
+    binList.reverse()
+    
+    for each in binList:
+        binNum = binNum + str(each)
+        
+    print("The decimal number " + str(dexIn) + " is " + str(binNum) + " in binary form.")
+    goBack = input("\n Type 'again' to do another conversion, type 'menu' to return to the menu. \n ⭢ ")
+    goBack.lower
+    if goBack == "again":
+        DexToBin()
+    elif goBack == "menu":
+        menu()
+
+def BinAdd():
+    binOne = input("Enter one binary number. \n ⭢ ")
+    binOne = str(binOne)
+    binTwo = input("Enter another binary number. \n ⭢ ")
+    binTwo = str(binTwo)
+    binThree = int(binOne) + int(binTwo)
+    binThree = str(binThree)
+    combined = ''
+    threeFlip = binThree[::-1]
+    for dig in threeFlip:
+        if dig == '0':
+            combined = combined + "0"
+        elif dig == '1':
+            combined = combined + "1"
+        elif dig == '2':
+            combined = combined + "0"
+            combined = combined + "1"
+        elif dig == '3':
+            combined = combined + "1"
+            combined = combined + "1"
+        
+    finalFlip = combined[::-1]
+    finalFlip = str(finalFlip)
+    
+    print(binOne + " added to " + binTwo + " equals: " + finalFlip)
+    goBack = input("\n Type 'again' to do another addition, type 'menu' to return to the menu. \n ⭢ ")
+    goBack.lower
+    if goBack == "again":
+        BinAdd()
+    elif goBack == "menu":
+        menu()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+menu()
