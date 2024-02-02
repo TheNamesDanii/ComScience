@@ -1,5 +1,5 @@
 def menu():
-    choice = input("Number Switchy Thing \n Please make a choice. \n 1) Binary to Decimal \n 2) Decimal to Binary \n 3) Binary Addition \n ⭢ ")
+    choice = input("Number Switchy Thing \n Please make a choice. \n 1) Binary to Decimal \n 2) Decimal to Binary \n 3) Binary Addition \n 4) Binary to Hexadecimal \n 5) Hexadecimal to Binary \n 6) Decimal to Hexadecimal \n 7) Hexadecimal to Decimal \n  ⭢ ")
     choice = int(choice)
     if choice == 1:
         BinToDex()
@@ -7,6 +7,14 @@ def menu():
         DexToBin()
     elif choice == 3:
         BinAdd()
+    elif choice == 4:
+        BinToHex()
+    elif choice == 5:
+        HexToBin()
+    elif choice == 6:
+        DexToHex()
+    elif choice == 7:
+        HexToDex()
     else:
         print("\n no! \n")
         menu()
@@ -83,15 +91,175 @@ def BinAdd():
 
 
 
+def BinToHex():
+    binIn = input("Enter a binary number. \n ⭢ ")
+    binFlip = binIn[::-1]
+    splits = ''
+    binLength = len(binFlip)
+    fours = [4,8,12,16,20,24,28,32,36,40]
+    if binLength in fours:
+        print('')
+    else:
+        while binLength not in fours:
+            binFlip = binFlip + "0"
+            binLength = len(binFlip)
+    binReFlip = binFlip[::-1]
+    splitAmount = (len(binFlip)) / 4
+    splitAmount = int(splitAmount)
+    splitCount = 0
+    split1 = -1
+    split2 = -5
+    while splitCount < splitAmount:
+        binSplit = binReFlip[split1:split2:-1]
+        split1 = split1 - 3
+        split2 = split2 - 3
+        splitCount = splitCount + 1
+        if binSplit == '0000':
+            splits = splits + '0'
+        elif binSplit == '0001':
+            splits = splits + '1'
+        elif binSplit == '0010':
+            splits = splits + '2'
+        elif binSplit == '0011':
+            splits = splits + '3'
+        elif binSplit == '0100':
+            splits = splits + '4'
+        elif binSplit == '0101':
+            splits = splits + '5'
+        elif binSplit == '0110':
+            splits = splits + '6'
+        elif binSplit == '0111':
+            splits = splits + '7'
+        elif binSplit == '1000':
+            splits = splits + '8'
+        elif binSplit == '1001':
+            splits = splits + '9'
+        elif binSplit == '1010':
+            splits = splits + 'A'
+        elif binSplit == '1100':
+            splits = splits + 'B'
+        elif binSplit == '1101':
+            splits = splits + 'C'
+        elif binSplit == '1110':
+            splits = splits + 'D'
+        elif binSplit == '1111':
+            splits = splits + 'E'
+    converted = splits[::-1]
+    print("The binary number " + binReFlip + " is " + converted + " in hexadecimal form.")
+    goBack = input("\n Type 'again' to do another conversion, type 'menu' to return to the menu. \n ⭢ ")
+    goBack.lower()
+    if goBack == "again":
+        BinToHex()
+    elif goBack == "menu":
+        menu()
 
 
+def HexToBin():
+    hexIn = input("Enter a hexadecimal number. \n ⭢ ")
+    combined = ''
+    for number in hexIn:
+        if number == '0':
+            combined = combined + "0000"
+        elif number == '1':
+            combined = combined + "0001"
+        elif number == '2':
+            combined = combined + "0010"
+        elif number == '3':
+            combined = combined + "0011"
+        elif number == '4':
+            combined = combined + "0100"
+        elif number == '5':
+            combined = combined + "0101"
+        elif number == '6':
+            combined = combined + "0110"
+        elif number == '7':
+            combined = combined + "0111"
+        elif number == '8':
+            combined = combined + "1000"
+        elif number == '9':
+            combined = combined + "1001"
+        elif number == 'A':
+            combined = combined + "1010"
+        elif number == 'B':
+            combined = combined + "1011"
+        elif number == 'C':
+            combined = combined + "1100"
+        elif number == 'D':
+            combined = combined + "1101"
+        elif number == 'E':
+            combined = combined + "1110"
+        elif number == 'F':
+            combined = combined + "1111"
+    converted = combined
+    print("The hexadecimal number " + hexIn + " is " + converted + " in binary form.")
+    goBack = input("\n Type 'again' to do another conversion, type 'menu' to return to the menu. \n ⭢ ")
+    goBack.lower
+    if goBack == "again":
+        HexToBin()
+    elif goBack == "menu":
+        menu()
 
+def DexToHex():
+    dexIn = input("Enter a decimal number. \n ⭢ ")
+    dexIn = int(dexIn)
+    inputted = dexIn
+    hexList = []
+    hexNum = ''
+    while dexIn > 0:
+        rem = dexIn % 16
+        if rem == 10:
+            rem = A
+        elif rem == 11:
+            rem = B
+        elif rem == 12:
+            rem = C
+        elif rem == 13:
+            rem = D
+        elif rem == 14:
+            rem = E
+        elif rem == 15:
+            rem = F
+        dexIn = dexIn // 16
+        hexList.append(rem)
+    hexList.reverse()
 
+    for each in hexList:
+        hexNum = hexNum + str(each)
+        
+    print("The decimal number " + str(inputted) + " is " + str(hexNum) + " in hexadecimal form.")
+    goBack = input("\n Type 'again' to do another conversion, type 'menu' to return to the menu. \n ⭢ ")
+    goBack.lower
+    if goBack == "again":
+        DexToHex()
+    elif goBack == "menu":
+        menu()
 
-
-
-
-
-
+def HexToDex():
+    hexInput = input("Enter a hexadecimal number. \n ⭢ ")
+    hexIn = hexInput[::-1]
+    dex = 0
+    for number in hexInput:
+        if number == 'A':
+            dexyLetter = 10
+        elif number == 'B':
+            dexyLetter = 11
+        elif number == 'C':
+            dexyLetter = 12
+        elif number == 'D':
+            dexyLetter = 13
+        elif number == 'E':
+            dexyLetter = 14
+        elif number == 'F':
+            dexyLetter = 15
+        else:
+            dexyLetter = number
+        dex = dex * 16 + int(dexyLetter)
+    print("The hexadecimal number " + hexInput + " is " + str(dex) + " in deximal form.")
+    goBack = input("\n Type 'again' to do another conversion, type 'menu' to return to the menu. \n ⭢ ")
+    goBack.lower
+    if goBack == "again":
+        DexToHex()
+    elif goBack == "menu":
+        menu()
 
 menu()
