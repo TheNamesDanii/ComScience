@@ -1,0 +1,122 @@
+def gateMenu():
+    choice = input("Logic Gate Selection Menu \n 1) AND Gate \n 2) OR Gate \n 3) NOT Gate \n ⭢ ")
+    choice = int(choice)
+    if choice == 1:
+        andPick()
+    elif choice == 2:
+        orPick()
+    elif choice == 3:
+        notPick()
+    else:
+        print("no!")
+        gateMenu()
+
+def andPick():
+    choice = input(" 1) AND Gate Truth Table \n 2) User Input \n ⭢ ")
+    choice = int(choice)
+    if choice == 1:
+        print("Here is the truth table for an AND gate\n  Input A |  Input B  | Output\n ------------------------------\n     0    |     0     |   0\n     0    |     1     |   0\n     1    |     0     |   0\n     1    |     1     |   1")
+        next = input(" 1) Return to the main menu \n 2) User Input \n ⭢ ")
+        next = int(next)
+        if next == 1:
+            gateMenu()
+        if next == 2:
+            in1 = input("Enter a value of 0 or 1 \n ⭢ ")
+            in1 = int(in1)
+            in2 = input("Enter another value of 0 or 1 \n ⭢ ")
+            in2 = int(in2)
+            andResult = andGate(in1,in2)
+            print("The output of those inputs is " + str(andResult) + ".")
+            gateMenu()
+    if choice == 2:
+        in1 = input("Enter a value of 0 or 1 \n ⭢ ")
+        in1 = int(in1)
+        in2 = input("Enter another value of 0 or 1 \n ⭢ ")
+        in2 = int(in2)
+        andResult = andGate(in1,in2)
+        print("The output of those inputs is " + str(andResult) + ".")
+        gateMenu()
+        
+def orGate(in1, in2):
+    
+    if in1 == 1 or in2 == 1:
+        return 1
+    elif in1 == 1 and in2 == 1:
+        return 1
+    else:
+        return 0
+
+def orPick():
+    choice = input(" 1) OR Gate Truth Table \n 2) User Input \n ⭢ ")
+    choice = int(choice)
+    if choice == 1:
+        print("Here is the truth table for an OR gate\n  Input A |  Input B  | Output\n ------------------------------\n     0    |     0     |   0\n     0    |     1     |   1\n     1    |     0     |   1\n     1    |     1     |   1")
+        next = input(" 1) Return to the main menu \n 2) User Input \n ⭢ ")
+        next = int(next)
+        if next == 1:
+            gateMenu()
+        if next == 2:
+            in1 = input("Enter a value of 0 or 1 \n ⭢ ")
+            in1 = int(in1)
+            in2 = input("Enter another value of 0 or 1 \n ⭢ ")
+            in2 = int(in2)
+            orResult = orGate(in1,in2)
+            print("The output of those inputs is " + str(orResult) + ".")
+            gateMenu()
+    if choice == 2:
+        in1 = input("Enter a value of 0 or 1 \n ⭢ ")
+        in1 = int(in1)
+        in2 = input("Enter another value of 0 or 1 \n ⭢ ")
+        in2 = int(in2)
+        andResult = andGate(in1,in2)
+        print("The output of those inputs is " + str(andResult) + ".")
+        gateMenu()
+
+
+def notPick():
+    choice = input(" 1) NOT Gate Truth Table \n 2) User Input \n ⭢ ")
+    choice = int(choice)
+    if choice == 1:
+        print("Here is the truth table for a NOT gate\n   Input  |   Output\n ---------------------\n     0    |     1\n     1    |     0")
+        next = input(" 1) Return to the main menu \n 2) User Input \n ⭢ ")
+        next = int(next)
+        if next == 1:
+            gateMenu()
+        if next == 2:
+            in1 = input("Enter a value of 0 or 1 \n ⭢ ")
+            in1 = int(in1)
+            notResult = notGate(in1)
+            print("The output of this inputs is " + str(notResult) + ".")
+            gateMenu()
+    if choice == 2:
+        in1 = input("Enter a value of 0 or 1 \n ⭢ ")
+        in1 = int(in1)
+        notResult = notGate(in1)
+        print("The output of those inputs is " + str(andResult) + ".")
+        gateMenu()
+
+
+def notGate(in1):
+    if in1 == 0:
+        return 1
+    elif in1 == 1:
+        return 0
+
+def andGate(in1, in2):
+
+    if in1 == 1 and in2 == 1:
+        return 1
+    else:
+        return 0
+    
+
+gateMenu()
+
+# AND x
+# OR x
+# NOT x
+# NAND
+# NOR
+# XOR
+# XNOR
+
