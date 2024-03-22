@@ -1,0 +1,35 @@
+UTFLibrary = []
+finished = 0
+while finished < 1:
+    U8Ins = input("Please enter the first 8 digits of a UTF-8 string. Type 'done' when finished. \n ⭢ ")
+    if U8Ins == 'done':
+        finished = finished + 1
+    else:
+        U8Ins = str(U8Ins)
+        UTFLibrary.append(U8Ins)
+
+decimalLibrary = []
+
+def BinDexy(binary):
+    bin = binary
+    dex = 0
+    for number in bin:
+        dex = dex * 2 + int(number)
+    decimalLibrary.append(dex)
+
+for binary in UTFLibrary:
+    outputted = BinDexy(binary)
+
+charLibrary = []
+finishedString = ''
+
+for number in decimalLibrary:
+    chara = chr(number)
+    charLibrary.append(chara)
+    
+for every in charLibrary:
+    finishedString = finishedString + every
+    decoded = finishedString
+    
+print("The input decoded is: " + decoded + ".")  
+    
