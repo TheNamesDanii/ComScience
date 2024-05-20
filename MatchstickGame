@@ -1,0 +1,100 @@
+(a) (i)
+3 is a losing position as I have to take the first matchstick or the first two matchsticks, then the opposite player may take the last two or last matchstick and win the game.
+
+(ii)
+4 is a winning position as I can take one matchstick, the other player can take two, then I take the last one. Another way is I take one, they take one, I take two. I win!
+
+(iii)
+5 matchsticks remaining
+Me | Other | Remaining
+1  |  1    | 3
+1  |  1    | 1
+1  |  0    | 0 = I take the last one. I win!
+
+Verdict = Winning Position!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+6 matchsticks remaining
+Me | Other | Remaining
+1  | 1     |  4
+1  | 2     |  1
+1  | 0     |  0 = I take the last one. I win!
+
+Verdict = Winning Position!
+
+(iv)
+I would choose to go second as one the other player would make their move and I would be able to see how many matchsticks are remaining and plot my remaining moves from there, for example taking away one or two matchsticks.
+
+(v)
+I would recommend taking two matchsticks if the number of remaining matchsticks is odd as it increases the chances of me pulling the last matchstick at the end of the game.
+
+(vi)
+
+No. of matchsticks remaining | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+Position (Win or Lose)       | W | W | W | L | L | W | W | W | W | W
+
+1 matchstick remaining
+Me | Other | Remaining
+1  |  0    | 0 = I take the last one. I win!
+
+2 matchsticks remaining
+Me | Other | Remaining
+1  |  1    | 1
+1  |  0    | 0 = I win!
+
+3 matchsticks remaining
+Me | Other | Remaining
+3  |  0    | 0 = I take the last one. I win!
+
+4 matchsticks remaining
+Me | Other | Remaining
+1  |  3    | 0 = I lost!
+
+Me | Other | Remaining
+2  |  2    | 0 = I lost!
+
+5 matchsticks remaining
+Me | Other | Remaining
+1  |  3    | 1
+1  |  0    | 0 = I take the last one. I win!
+
+6 matchsticks remaining
+Me | Other | Remaining
+2  |  3    | 1
+1  |  0    | 0 = I take the last one. I win!
+
+7 matchsticks remaining
+Me | Other | Remaining
+3  |  2    | 2
+2  |  0    | 0 = I take the last one. I win!
+
+8 matchsticks remaining
+Me | Other | Remaining
+2  |  3    | 3
+3  |  0    | 0 = I take the last one. I win!
+
+9 matchsticks remaining
+Me | Other | Remaining
+2  |  2    | 5
+1  |  3    | 1
+1  |  0    | 0 = I take the last one. I win!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+(b) (ii)
+Based on the diagram, taking one from pile Y is best as no matter what move the other player takes, player A can always take the last matchstick from either pile and win the game.
+
+(iii)
+Take one from pile X, making the score (1, 3). The other player takes all the matchsticks from pile Y, making it (1,0). Then take the last matchstick from pile X to win the game.
+
+(iv)
+A winning strategy is to just take one stick at a time from alternating piles to make the other player take the second last stick, therefore taking the last stick and winning.
+
+(v)
+The number of sticks in all of the piles is the same therefore using the same strategy as before will guarantee a win as the other player will have to take the second last stick from the second last pile and therefore
+put the win into my hands.
+
+(c)
+I have thought of pattern recognition as I have noticed a pattern when it comes to how the end of the game plays out if I were to take one stick at a time, not two or three. If I take just one on my turn,
+I almost always am able to take the last stick and win the game.
