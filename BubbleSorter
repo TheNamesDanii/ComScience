@@ -1,0 +1,44 @@
+unsorted = []
+response = ''
+while response != "x":
+    response = input("Please input a number for me to sort. \n ⭢ ")
+    if response.isdigit() == True:
+        response = int(response)
+        unsorted.append(response)
+    else:
+        response = response.lower()
+print("This is what the unsorted yoke looks like: ")
+print(unsorted)
+bubble1 = ''
+bubble2 = ''
+memoryNum = ''
+reqPasses = (len(unsorted) - 1)
+
+for i in range(0,reqPasses,1):
+    indexHelper = 1
+    for digit in unsorted:
+        bubble1 = digit
+        bubble1 = int(bubble1)
+        bubble2 = unsorted[indexHelper]
+        bubble2 = int(bubble2)
+        if bubble1 > bubble2:
+            location = unsorted.index(bubble1)
+            if location == 0:
+                location = 1
+            else:
+                pass
+            memoryNum = bubble2
+            unsorted.remove(bubble2)
+            unsorted.insert((location - 1),memoryNum)
+            if indexHelper == (len(unsorted)) - 1:
+                pass
+            else:
+                indexHelper = indexHelper + 1
+        else:
+            if indexHelper == (len(unsorted)) - 1:
+                pass
+            else:
+                indexHelper = indexHelper + 1 
+                            
+print("\nTada! All sorted!")
+print(unsorted)
