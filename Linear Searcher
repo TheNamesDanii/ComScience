@@ -1,0 +1,28 @@
+givenList = []
+response = ''
+while response != "x": 
+    response = input("Please enter a value to add to the list of things to look for. Type 'x' to finish. \n ⭢ ")
+    if response.isdigit() == True:
+        response = int(response)
+        givenList.append(response)
+    else:
+        response = response.lower()
+target = input("Please enter a target value for me to find. \n ⭢ ")
+while target.isdigit() == False:
+    print("[DISCREPANCY] \nThis value is not a number, please re-enter the value. ")
+target = int(target)
+located = 0
+found = "The target element was not found in the provided list. Sorry."
+for element in givenList:
+    element = int(element)
+    if element == target:
+        location = givenList.index(element)
+        print("Found it! Target " + str(target) + " was found at index location " + str(location) + ".")
+        located = 1
+        break
+    else:
+        pass
+if located == 0:
+    print(found)
+    
+    
