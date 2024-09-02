@@ -1,0 +1,39 @@
+response = 'blwahh'
+listy = []
+while response != "x":
+    response = input("Please enter the first, next, or last value in a list and make sure it is SORTED please. \n ⭢ ")
+    if response.isdigit() == True:
+        response = int(response)
+        listy.append(response)
+    else:
+        if response == "x":
+            pass
+        else:
+            print("[DISCREPANCY] \n Entered value is not a number. Please re-enter the value.")
+target = input("Please enter a target value for me to look for. \n ⭢ ")
+target = int(target)
+found = 0
+low = 0
+high = (len(listy) - 1)
+middle = (low + high) / 2
+mid = round(middle)
+
+while found < 1:
+    middle = (low + high) / 2
+    mid = round(middle)
+    if listy[mid] == target:
+        found = 1
+        break
+    elif listy[mid] < target:
+        low = mid + 1
+    elif listy[mid] > target:
+        high = mid - 1
+        if low == high:
+            break
+        elif low > high:
+            break
+
+if found == 1:
+    print("Found it! Target " + str(target) + " was found at index position " + str(mid) + ".")
+else:
+    print("Apologies, I didnt find the target in this list.")
