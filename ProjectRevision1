@@ -1,0 +1,136 @@
+# Colours and stuff
+
+import colorama
+from colorama import Fore,Back,Style
+running = 420 # This is just to make the sorter return to the main menu after sorting everything
+
+# Number Grabber Thingy
+
+response = ''
+itemCount = 0
+collection = []
+sortedList = []
+while response != 'x' or len(collection) > 19:
+    response = input("Please enter a number, any number. \nSlots used: " + str(itemCount) + "/20. \n ⭢ ")
+    if response.isdigit() == True:
+        response = int(response)
+        collection.append(response)
+        itemCount = itemCount + 1
+    elif response == 'x':
+        pass
+    else:
+        print("\n[DISCREPANCY] \n Invalid input. Please try again. \n")
+        pass
+
+unlocked = False
+
+# All of the options and apps
+
+def menu(unlocked):
+    if unlocked == False:
+        closed = (Fore.RED + Style.BRIGHT + "Option Locked. List Not Sorted." + Style.RESET_ALL)
+    elif unlocked == True:
+        closed = (Fore.GREEN + Style.BRIGHT + "Option Unlocked. List Sorted." + Style.RESET_ALL)
+
+    choice = input("Please make a choice from the following list of what to do with these numbers. \n1) Calculate Mean\n2) Calculate Median " + str(closed) + "\n3) Calculate Mode\n4) Frequency Viewer\n5) Top 5 Elements " + str(closed) + "\n6) Last 5 Elements " + str(closed) + "\n7) List Sorter\n ⭢ ")
+    if choice == "1":
+        meanApp(collection)
+    elif choice == "2":
+        medianApp(collection)
+    elif choice == "3":
+        modeApp(collection)
+    elif choice == "4":
+        freqApp(collection)
+    elif choice == "5":
+        top5App(collection)
+    elif choice == "6":
+        last5App(collection)
+    elif choice == "7":
+        unlocked = bubblySorting(collection,unlocked)
+        print(unlocked)
+        
+    else:
+        print("\n[DISCREPANCY] \nInvalid menu choice. Please try again. \n")
+        menu()
+        return unlocked
+
+# Bubble Sorter
+
+def bubblySorting(collection,unlocked):
+    bubble1 = ''
+    bubble2 = ''
+    memoryNum = ''
+    reqPasses = (len(collection) - 1)
+
+    for i in range(0,reqPasses,1):
+        indexHelper = 1
+        for digit in collection:
+            bubble1 = digit
+            bubble1 = int(bubble1)
+            bubble2 = collection[indexHelper]
+            bubble2 = int(bubble2)
+            if bubble1 > bubble2:
+                location = collection.index(bubble1)
+                if location == 0:
+                    location = 1
+                else:
+                    pass
+                memoryNum = bubble2
+                collection.remove(bubble2)
+                collection.insert((location - 1),memoryNum)
+                if indexHelper == (len(collection)) - 1:
+                    pass
+                else:
+                    indexHelper = indexHelper + 1
+            else:
+                if indexHelper == (len(collection)) - 1:
+                    pass
+                else:
+                    indexHelper = indexHelper + 1
+                                
+    print("\nAll sorted! Returning to the main menu. \n ")
+    unlocked = True
+    print(collection)
+    return unlocked
+
+
+
+
+# Mean App
+
+def meanApp(collection):
+    total = 0
+    divBy = len(collection)
+    for item in collection:
+        item = int(item)
+        total = total + item
+    divd = total / divBy
+    mean = round(divd)
+    print("The mean number of the collection is " + str(mean) + ".\n")
+    comeBack = ''
+    while comeBack != 'x':
+        comeBack = input("\nType 'x' here to return to the main menu. \n⭢ ")
+        if comeBack != 'x':
+            print("\n[DISCREPANCY] \nThat was not 'x'. Please enter 'x'. \n")
+            pass
+        else:
+            pass
+    menu()
+    
+# Median App
+
+def medianApp(collection):
+        middle = (len(collection) / 2)
+        middleIndx = round(middle)
+        median = collection[middleIndx]
+        print("The median of this collection is " + str(median) + ".")
+        print(unlocked)
+
+# Mode App
+
+def modeApp(collection):
+    rekoy6yryurtyfry = ''
+
+while running > 0:
+    print(unlocked)
+    menu(unlocked)
