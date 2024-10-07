@@ -1,0 +1,82 @@
+# 1
+word = input("Enter a word, any word.\n⭢ ")
+word = word.lower()
+def unner(word):
+    new = "un"
+    new = new + word
+    return new
+newWord = unner(word)
+print(newWord)
+
+# 2
+
+word = input("Enter a word, any word.\n⭢ ")
+word = word.lower()
+def esser(word):
+    essed = word + "s"
+    return essed
+postWord = esser(word)
+print(postWord)
+
+# 3
+
+diam = input("Enter the diameter of a circle.\n⭢ ")
+diam = int(diam)
+def circle_area(diam):
+    radius = diam / 2
+    surf = 3.14 * (radius * radius)
+    surf = round(surf,2)
+    return surf
+surface = circle_area(diam)
+print("The area of a circle with a diamater of " + str(diam) + " is " + str(surface) + " units.")
+
+# 4
+
+height = input("Enter the height of a rectangle.\n⭢ ")
+height = int(height)
+width = input("Enter the width of a rectangle.\n⭢ ")
+width = int(width)
+def rectangle_area(width,height):
+    area = width * height
+    return area
+area = rectangle_area(width,height)
+print("The area of a rectangle with a width of " + str(width) + " and a height of " + str(height) + " is " + str(area) + " units.")
+
+# 5
+
+def circle_perimeter(diamat):
+    radius = diamat / 2
+    perimeter = 2 * 3.14 * radius
+    return perimeter
+
+def rectangle_perimeter(width,height):
+    perimeter = (width + height) * 2
+    return perimeter
+
+def menu():
+    choice = input("1. Area of a circle\n2. Perimeter of a circle \n3. Area of a rectangle \n4. Perimeter of a rectangle\n⭢ ")
+    choice = int(choice)
+    if choice == 1:
+        diam = input("Enter the diamater of a circle.\n⭢ ")
+        diam = int(diam)
+        surfaceArea = circle_area(diam)
+        print("The area of a circle with a diamater of " + str(diam) + " is " + str(surfaceArea) + " units.")
+    elif choice == 2:
+        diamat = input("Enter the diameter of a circle.\n⭢ ")
+        diamat = int(diamat)
+        perimeter = circle_perimeter(diamat)
+        print("The perimeter of a circle with a diamater of " + str(diamat) + " is " + str(perimeter) + " units.")
+    elif choice == 3:
+        height = input("Enter the height of a rectangle.\n⭢ ")
+        height = int(height)
+        width = input("Enter the width of a rectangle.\n⭢ ")
+        width = int(width)
+        area = rectangle_area(width,height)
+        print("The area of a rectangle with a width of " + str(width) + " and a height of " + str(height) + " is " + str(area) + " units.")
+    elif choice == 4:
+        height = input("Enter the height of a rectangle.\n⭢ ")
+        height = int(height)
+        width = input("Enter the width of a rectangle.\n⭢ ")
+        width = int(width)
+        rectanglePerimeter = rectangle_perimeter(width,height)
+        print("The perimeter of a rectangle with a width of " + str(width) + " and a height of " + str(height) + " is " + str(rectanglePerimeter) + " units.")
