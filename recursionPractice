@@ -1,0 +1,31 @@
+# 1
+
+numberlist = [4,6,9,2,7,1,10]
+def recurs(numberlist):
+    if len(numberlist) == 0:
+        return 0
+    else:
+        return numberlist[0] + recurs(numberlist[1:])
+    
+sum = recurs(numberlist)
+print(sum)
+
+# 2
+
+integer = "TBC"
+
+# 3
+
+string = "mc6fiddle"
+def has_digit(string):
+    if len(string) == 0:
+        return False
+    else:
+        if string[0].isdigit() == True:
+            return True
+        else:
+            return has_digit(string[1:])
+    
+gh = has_digit(string)
+print(gh)
+    
