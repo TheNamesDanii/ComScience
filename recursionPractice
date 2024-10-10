@@ -16,7 +16,7 @@ integer = "TBC"
 
 # 3
 
-string = "mc6fiddle"
+string = "mcfiddle 6"
 def has_digit(string):
     if len(string) == 0:
         return False
@@ -26,6 +26,6 @@ def has_digit(string):
         else:
             return has_digit(string[1:])
     
-gh = has_digit(string)
-print(gh)
+AAAAAAAAAHHHH = has_digit(string)
+print(AAAAAAAAAHHHH)
     
