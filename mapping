@@ -1,0 +1,52 @@
+# 1
+
+words = ['apple', 'banana', 'cherry']
+
+def yoink(word):
+    return word[0]
+
+firstLetters = list(map(yoink,words))
+print(firstLetters)
+
+# 2
+
+def capital(word):
+    newWord = word.upper()
+    return newWord
+
+capitalized = list(map(capital, words))
+print(capitalized)
+
+# 3
+
+s = [' hello ', ' world ', ' python ']
+
+def strStrip(string):
+    string = string.strip()
+    return string
+
+stripped = list(map(strStrip, s))
+print(stripped)
+
+# 4
+
+celsius = [0, 20, 37, 100]
+
+def CtoF(temp):
+    temp = int(temp)
+    F = (temp * 9/5) + 32
+    round(F,2)
+    return F
+
+fahrenheits = list(map(CtoF, celsius))
+print(fahrenheits)
+
+
+
+
+
+
+
+
+
+
