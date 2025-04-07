@@ -1,0 +1,19 @@
+#Question_16_A_OL
+#Enter your name here: Doodoo McGee
+
+value_small_containers = 0.15
+
+number_small_containers = int(input("Please enter how many small containers are being returned: "))
+total_value_small = value_small_containers * number_small_containers
+print("The total value of the small containers was: €" + str(total_value_small))
+
+value_large_containers = 0.25
+
+number_large_containers = int(input("Please enter how many large containers are being returned: "))
+total_value_large = value_large_containers * number_large_containers
+print("The total value of all the large containers was: €" + str(total_value_large))
+
+receipt = float(input("Please enter the shopping total in the format €XX.XX. "))
+discounted = receipt - (total_value_small + total_value_large)
+print("The shopping bill with the deposit return is: €" + str(discounted))
+
