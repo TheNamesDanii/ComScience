@@ -1,0 +1,23 @@
+#Question_16_B_OL
+#Enter your name here: Daniel Dybisz
+
+import random
+print("Your options are as follows: D4, D6, D12 and D20.")
+
+
+n = int(input("Which type of dice do you want? 4,6,12 or 20: "))
+
+if n == 4:
+    diceRoll = n
+elif n == 6:
+    diceRoll = n
+elif n == 12:
+    diceRoll = n
+elif n == 20:
+    diceRoll = n
+else:
+    print("no!")
+
+print("You will roll a " + str(n) + "-sided dice.")
+roll = random.randrange(1,n,1)
+print("The roll was: " + str(roll))
